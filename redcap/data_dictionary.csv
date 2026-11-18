@@ -1,0 +1,24 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max","Identifier?","Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+record_id,eligibility,,text,"Participant ID",,,,,,,,,,,,,
+elig_date,eligibility,,text,"Date of eligibility assessment",,,date_ymd,,,,,y,,,,,
+incl_age,eligibility,"Inclusion criteria",yesno,"Age 18 to 75 years at Screening?",,,,,,,,y,,,,,REQ:IN_01
+incl_dx,eligibility,,yesno,"Diagnosis of plaque psoriasis for at least 6 months before Baseline?",,,,,,,,y,,,,,REQ:IN_02
+incl_bsa,eligibility,,yesno,"Body surface area (BSA) involvement of at least 10% at Screening?",,,,,,,,y,,,,,REQ:IN_03
+childbearing,eligibility,"Exclusion criteria",yesno,"Is the participant of childbearing potential?",,,,,,,,y,,,,,
+excl_pregnant,eligibility,,yesno,"Pregnant or breastfeeding?",,,,,,,[childbearing] = '1',y,,,,,REQ:EX_01
+excl_infection,eligibility,,yesno,"Active serious infection within 4 weeks before Baseline?",,,,,,,,y,,,,,REQ:EX_02
+elig_met,eligibility,"Eligibility decision",yesno,"Participant meets all eligibility criteria?",,,,,,,,y,,,,,
+elig_fail_reason,eligibility,,notes,"Reason the participant is not eligible",,,,,,,[elig_met] = '0',y,,,,,
+dob,demographics,,text,"Date of birth",,,date_ymd,,,y,,y,,,,,
+sex,demographics,,radio,"Sex at birth","1, Female | 2, Male",,,,,,,y,,,,,
+vs_date,vital_signs,,text,"Date of vital signs",,,date_ymd,,,,,y,,,,,
+vs_sbp,vital_signs,,text,"Systolic blood pressure (mmHg)",,,integer,70,250,,,y,,,,,
+vs_dbp,vital_signs,,text,"Diastolic blood pressure (mmHg)",,,integer,40,150,,,y,,,,,
+vs_hr,vital_signs,,text,"Heart rate (beats per minute)",,,integer,30,200,,,y,,,,,
+vs_weight,vital_signs,,text,"Weight (kg)",,,number,30,300,,,,,,,,
+dose_date,study_drug,,text,"Date of dosing visit",,,date_ymd,,,,,y,,,,,
+dose_given,study_drug,,yesno,"Was study drug administered?",,,,,,,,y,,,,,
+dose_level,study_drug,,dropdown,"Dose administered","1, 50 mg | 2, 100 mg",,,,,,[dose_given] = '1',y,,,,,
+dose_not_given_reason,study_drug,,notes,"Reason study drug was not administered",,,,,,,[dose_given] = '0',y,,,,,
+itch_date,itch_nrs,,text,"Date of completion",,,date_ymd,,,,,y,,,,,
+itch_score,itch_nrs,,text,"Itch NRS: rate your itch today from 0 (no itch) to 10 (worst itch imaginable)",,,integer,0,10,,,y,,,,,

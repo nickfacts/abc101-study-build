@@ -1,0 +1,4 @@
+# Validated-instrument locks and the checks themselves need human (QA) review.
+/trace/locked_instruments.json  @nickfacts
+/validator/                     @nickfacts
+/tests/                         @nickfacts

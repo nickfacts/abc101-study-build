@@ -1,0 +1,30 @@
+{
+  "_note": "Simplified, USDM-inspired subset of the ABC-101 protocol. This is the requirements baseline the REDCap build must conform to. Days are counted from the Screening visit (Day 0).",
+  "study": {
+    "id": "ABC-101",
+    "title": "A Phase 2, Randomized, Double-Blind Study of ABX-17 in Adults with Moderate-to-Severe Plaque Psoriasis",
+    "phase": "Phase 2",
+    "protocolVersion": "1.0",
+    "amendment": null
+  },
+  "encounters": [
+    { "id": "ENC_SCR", "name": "Screening", "day": 0,  "windowMinus": 0, "windowPlus": 0, "contactModes": ["In person"] },
+    { "id": "ENC_BL",  "name": "Baseline",  "day": 14, "windowMinus": 0, "windowPlus": 0, "contactModes": ["In person"] },
+    { "id": "ENC_W4",  "name": "Week 4",    "day": 42, "windowMinus": 3, "windowPlus": 3, "contactModes": ["In person"] },
+    { "id": "ENC_W12", "name": "Week 12",   "day": 98, "windowMinus": 3, "windowPlus": 3, "contactModes": ["In person"] }
+  ],
+  "eligibilityCriteria": [
+    { "id": "IN_01", "category": "Inclusion", "text": "Age 18 to 75 years at Screening." },
+    { "id": "IN_02", "category": "Inclusion", "text": "Diagnosis of plaque psoriasis for at least 6 months before Baseline." },
+    { "id": "IN_03", "category": "Inclusion", "text": "Body surface area (BSA) involvement of at least 10% at Screening." },
+    { "id": "EX_01", "category": "Exclusion", "text": "Pregnant or breastfeeding (applies to participants of childbearing potential)." },
+    { "id": "EX_02", "category": "Exclusion", "text": "Active serious infection within 4 weeks before Baseline." }
+  ],
+  "activities": [
+    { "id": "ACT_ELIG", "name": "Eligibility assessment", "encounters": ["ENC_SCR"],                              "licensed": false },
+    { "id": "ACT_DEMO", "name": "Demographics",           "encounters": ["ENC_SCR"],                              "licensed": false },
+    { "id": "ACT_VS",   "name": "Vital signs",            "encounters": ["ENC_SCR", "ENC_BL", "ENC_W4", "ENC_W12"], "licensed": false },
+    { "id": "ACT_DOSE", "name": "Study drug administration", "encounters": ["ENC_BL", "ENC_W4"],                   "licensed": false },
+    { "id": "ACT_ITCH", "name": "Itch NRS (validated instrument)", "encounters": ["ENC_BL", "ENC_W4", "ENC_W12"],  "licensed": true }
+  ]
+}

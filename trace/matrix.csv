@@ -1,0 +1,15 @@
+req_id,kind,artifact,locator,test_id
+ENC_SCR,encounter,redcap/events.csv,screening_arm_1,conformance/ENC_SCR
+ENC_BL,encounter,redcap/events.csv,baseline_arm_1,conformance/ENC_BL
+ENC_W4,encounter,redcap/events.csv,week_4_arm_1,conformance/ENC_W4
+ENC_W12,encounter,redcap/events.csv,week_12_arm_1,conformance/ENC_W12
+IN_01,criterion,redcap/data_dictionary.csv,incl_age,conformance/IN_01
+IN_02,criterion,redcap/data_dictionary.csv,incl_dx,conformance/IN_02
+IN_03,criterion,redcap/data_dictionary.csv,incl_bsa,conformance/IN_03
+EX_01,criterion,redcap/data_dictionary.csv,excl_pregnant,conformance/EX_01
+EX_02,criterion,redcap/data_dictionary.csv,excl_infection,conformance/EX_02
+ACT_ELIG,activity,redcap/instrument_designation.csv,eligibility,conformance/ACT_ELIG
+ACT_DEMO,activity,redcap/instrument_designation.csv,demographics,conformance/ACT_DEMO
+ACT_VS,activity,redcap/instrument_designation.csv,vital_signs,conformance/ACT_VS
+ACT_DOSE,activity,redcap/instrument_designation.csv,study_drug,conformance/ACT_DOSE
+ACT_ITCH,activity,redcap/instrument_designation.csv,itch_nrs,conformance/ACT_ITCH

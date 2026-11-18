@@ -1,0 +1,5 @@
+event_name,arm_num,day_offset,offset_min,offset_max,unique_event_name,custom_event_label
+Screening,1,0,0,0,screening_arm_1,
+Baseline,1,14,0,0,baseline_arm_1,
+Week 4,1,42,3,3,week_4_arm_1,
+Week 12,1,98,3,3,week_12_arm_1,

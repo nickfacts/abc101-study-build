@@ -1,0 +1,20 @@
+name: study-build-checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - name: REDCap structural validation
+        run: npm run validate
+      - name: Conformance tests (build implements spec)
+        run: npm test
