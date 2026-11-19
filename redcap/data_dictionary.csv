@@ -7,6 +7,7 @@ incl_bsa,eligibility,,yesno,"Body surface area (BSA) involvement of at least 10%
 childbearing,eligibility,"Exclusion criteria",yesno,"Is the participant of childbearing potential?",,,,,,,,y,,,,,
 excl_pregnant,eligibility,,yesno,"Pregnant or breastfeeding?",,,,,,,[childbearing] = '1',y,,,,,REQ:EX_01
 excl_infection,eligibility,,yesno,"Active serious infection within 4 weeks before Baseline?",,,,,,,,y,,,,,REQ:EX_02
+excl_prior_biologic,eligibility,,yesno,"Prior biologic therapy for psoriasis within 12 weeks before Baseline?",,,,,,,,y,,,,,REQ:EX_03
 elig_met,eligibility,"Eligibility decision",yesno,"Participant meets all eligibility criteria?",,,,,,,,y,,,,,
 elig_fail_reason,eligibility,,notes,"Reason the participant is not eligible",,,,,,,[elig_met] = '0',y,,,,,
 dob,demographics,,text,"Date of birth",,,date_ymd,,,y,,y,,,,,
@@ -22,3 +23,9 @@ dose_level,study_drug,,dropdown,"Dose administered","1, 50 mg | 2, 100 mg",,,,,,
 dose_not_given_reason,study_drug,,notes,"Reason study drug was not administered",,,,,,,[dose_given] = '0',y,,,,,
 itch_date,itch_nrs,,text,"Date of completion",,,date_ymd,,,,,y,,,,,
 itch_score,itch_nrs,,text,"Itch NRS: rate your itch today from 0 (no itch) to 10 (worst itch imaginable)",,,integer,0,10,,,y,,,,,
+psq5_date,psq5,,text,"Date of completion",,,date_ymd,,,,,y,,,,,
+psq5_item1,psq5,,text,"[[LICENSED_TEXT_PENDING item 1]]",,,,,,,,y,,,,,
+psq5_item2,psq5,,text,"[[LICENSED_TEXT_PENDING item 2]]",,,,,,,,y,,,,,
+psq5_item3,psq5,,text,"[[LICENSED_TEXT_PENDING item 3]]",,,,,,,,y,,,,,
+psq5_item4,psq5,,text,"[[LICENSED_TEXT_PENDING item 4]]",,,,,,,,y,,,,,
+psq5_item5,psq5,,text,"[[LICENSED_TEXT_PENDING item 5]]",,,,,,,,y,,,,,
